@@ -32,6 +32,7 @@ public class PostService {
         return new PostResponseDto(post);
     }
 
+    //TODO: readonly 적용 필요, 트랙젝션 개별 적용
     public List<PostRequestDto> findAll() {
 
         List<Post> postList = postRepository.findAll();

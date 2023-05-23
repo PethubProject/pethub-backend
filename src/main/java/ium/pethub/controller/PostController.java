@@ -27,6 +27,8 @@ import java.util.List;
 @RequestMapping("/api/post")
 public class PostController {
 
+    //TODO : 코드 공유 가능하도록 깔끔하게 + id 가독성 좋도록, 전체적으로 api구분이 너무 안됨... 
+
     private final PostService postService;
 
 //    @GetMapping("/save")
@@ -44,8 +46,9 @@ public class PostController {
         return ResponseEntity.ok().body(ResponseDto.of(HttpStatus.OK, responseDto));
     }
 
-    @GetMapping("/")
 
+    // ????
+    @GetMapping("/")
     public ResponseEntity<?> findAll(){
         //DB에서 전체 게시글 데이터를 가져와 list.html에 보여줌
 
@@ -55,9 +58,9 @@ public class PostController {
         return ResponseEntity.ok().body(ResponseDto.of(HttpStatus.OK, postDtoList));
     }
 
+    //TODO: nickname검색 필요 : gui에서 닉네임으로 접근 시
     @GetMapping("/{id}")
-
-    public ResponseEntity<?> findById(@PathVariable Long id,@PageableDefault(page=1) Pageable pageable){
+    public ResponseEntity<?> findById(@PathVariable Long id, @PageableDefault(page=1) Pageable pageable){
 
         //경로상의 데이터를 파싱해올 때에는 PathVariable 어노테이션 사용
         //html에 전달해야 하므로 model객체를 가져옴
@@ -84,6 +87,7 @@ public class PostController {
     }
 
     //수정 api
+    //TODO: putmapping
     @PostMapping("/update")
 
     public ResponseEntity<?> update(@RequestBody PostRequestDto prePostDto){
