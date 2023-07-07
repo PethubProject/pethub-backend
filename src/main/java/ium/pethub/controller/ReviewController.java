@@ -3,7 +3,7 @@ package ium.pethub.controller;
 import ium.pethub.dto.review.ReviewSaveRequestDto;
 import ium.pethub.dto.review.ReviewUpdateRequestDto;
 import ium.pethub.service.ReviewService;
-import ium.pethub.util.UserContext;
+import ium.pethub.util.jwt.UserContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

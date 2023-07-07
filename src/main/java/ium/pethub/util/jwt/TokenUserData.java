@@ -1,4 +1,4 @@
-package ium.pethub.util;
+package ium.pethub.util.jwt;
 
 import io.jsonwebtoken.Claims;
 import lombok.AllArgsConstructor;

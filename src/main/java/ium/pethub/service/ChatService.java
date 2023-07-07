@@ -12,7 +12,7 @@ import ium.pethub.dto.chat.response.ChatMessageListResponseDto;
 import ium.pethub.dto.chat.response.ChatResponseDto;
 import ium.pethub.dto.chat.response.ChatRoomResponseDto;
 import ium.pethub.dto.chat.response.CreateRoomResponseDto;
-import ium.pethub.util.UserContext;
+import ium.pethub.util.jwt.UserContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

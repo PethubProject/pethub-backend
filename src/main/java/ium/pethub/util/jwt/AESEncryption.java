@@ -1,4 +1,4 @@
-package ium.pethub.util;
+package ium.pethub.util.jwt;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

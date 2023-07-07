@@ -1,7 +1,7 @@
 package ium.pethub.util.interceptor;
-import ium.pethub.util.AuthCheck;
-import ium.pethub.util.TokenUserData;
-import ium.pethub.util.UserContext;
+import ium.pethub.util.jwt.AuthCheck;
+import ium.pethub.util.jwt.TokenUserData;
+import ium.pethub.util.jwt.UserContext;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.Ordered;

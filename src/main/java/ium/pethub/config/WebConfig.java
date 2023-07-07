@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import ium.pethub.util.FilePathResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -20,8 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class WebConfig implements WebMvcConfigurer {
 
-    // private final TokenArgumentResolver tokenArgumentResolver;
-
+    private final FilePathResolver filePathResolver;
 
     @Bean
     public RestTemplate restTemplate() {
@@ -54,19 +54,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        Path path = Paths.get("pethub/src/main/upload/img/");
-
-        /**
-         * 수정자 : 조훈창
-         * 수정일자 : 2023-06-01
-         * 수정내용 : 업로드 디렉토리가 없을 경우 생성
-         * 
-         */
-        File file = new File(path.toAbsolutePath().toString());
-        if(!file.exists()){
+        String imageBasePath = filePathResolver.resolveImageBasePath().toString();
+        File file = new File(imageBasePath);
+        if (!file.exists()) {
             file.mkdirs();
         }
         registry.addResourceHandler("/upload_img/**")
-                .addResourceLocations("file:"+ path.toAbsolutePath()+"/");
+                .addResourceLocations("file:" + imageBasePath + "/");
     }
 }

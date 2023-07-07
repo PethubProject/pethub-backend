@@ -1,4 +1,4 @@
-package ium.pethub.util;
+package ium.pethub.util.jwt;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

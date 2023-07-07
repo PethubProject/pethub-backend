@@ -5,17 +5,15 @@ import ium.pethub.dto.vet.request.VetUpdateRequestDto;
 import ium.pethub.dto.vet.response.VetInfoResponseDto;
 import ium.pethub.dto.vet.response.VetResponseDto;
 import ium.pethub.service.VetService;
-import ium.pethub.util.AuthCheck;
-import ium.pethub.util.UserContext;
-import ium.pethub.util.ValidToken;
+import ium.pethub.util.jwt.AuthCheck;
+import ium.pethub.util.jwt.UserContext;
+import ium.pethub.util.jwt.ValidToken;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @AllArgsConstructor

@@ -1,9 +1,9 @@
 package ium.pethub.util.interceptor;
 
-import ium.pethub.util.TokenProvider;
-import ium.pethub.util.UserContext;
-import ium.pethub.util.ValidToken;
-import ium.pethub.util.ValidTokenProcess;
+import ium.pethub.util.jwt.TokenProvider;
+import ium.pethub.util.jwt.UserContext;
+import ium.pethub.util.jwt.ValidToken;
+import ium.pethub.util.jwt.ValidTokenProcess;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;

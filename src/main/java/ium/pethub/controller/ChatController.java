@@ -1,8 +1,8 @@
 package ium.pethub.controller;
 import ium.pethub.dto.common.ResponseDto;
 import ium.pethub.service.ChatService;
-import ium.pethub.util.UserContext;
-import ium.pethub.util.ValidToken;
+import ium.pethub.util.jwt.UserContext;
+import ium.pethub.util.jwt.ValidToken;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
